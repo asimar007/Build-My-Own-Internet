@@ -22,13 +22,5 @@
     "tags": ["JavaScript", "compiler", "parser"],
     "year": 2025,
     "coverImage": "/images/programming-lang.png"
-  },
-  {
-    "slug": "build-my-own-redis",
-    "title": "Build My Own Redis",
-    "tagline": "An in-memory data store with RESP protocol, persistence, and clustering.",
-    "tags": ["systems", "networking", "database"],
-    "year": 2025,
-    "coverImage": "/images/redis.png"
   }
 ]

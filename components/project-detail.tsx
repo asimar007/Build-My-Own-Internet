@@ -166,15 +166,17 @@ export default function ProjectDetail({
       ) : null}
 
       {/* Tech Stack */}
-      <Section title="Tech Stack">
-        <div className="flex flex-wrap gap-2">
-          {project.techStack.map((tech) => (
-            <Badge key={tech} variant="outline">
-              {tech}
-            </Badge>
-          ))}
-        </div>
-      </Section>
+      {project.techStack?.length ? (
+        <Section title="Tech Stack">
+          <div className="flex flex-wrap gap-2">
+            {project.techStack.map((tech) => (
+              <Badge key={tech} variant="outline">
+                {tech}
+              </Badge>
+            ))}
+          </div>
+        </Section>
+      ) : null}
 
       {/* Use Cases */}
       {project.useCases?.length ? (

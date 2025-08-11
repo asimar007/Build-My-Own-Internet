@@ -10,7 +10,6 @@ A curated showcase of "Build My Own X" projects - learn by building your own ver
 
 - **Build My Own Programming Language** - From lexer to parser to bytecode VM — a language built from scratch
 
-- **Build My Own Redis** - An in-memory data store with RESP protocol, persistence, and clustering
 - **Coming Soon**
 
 ## 🛠️ Tech Stack
