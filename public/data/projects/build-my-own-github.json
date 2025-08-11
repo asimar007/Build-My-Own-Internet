@@ -1,0 +1,107 @@
+{
+  "slug": "build-my-own-github",
+  "title": "Build My Own Git (Git Server)",
+  "tagline": "Self-hosted Git server on AWS EC2 with SSH access and GitWeb UI.",
+  "description": "This project demonstrates how to set up a self-hosted Git server using an AWS EC2 instance. It covers installing Git, enabling secure SSH access for developers, creating bare repositories, pushing/pulling from multiple machines, and adding a web-based repository browser via GitWeb.",
+  "audience": "Developers and teams who want to self-host version control and learn Git internals.",
+  "problem": "How to set up a secure, lightweight, self-hosted Git server for multi-user collaboration with both CLI and web UI access.",
+  "features": [
+    "Launch and configure an AWS EC2 instance for hosting Git",
+    "Create a dedicated 'git' user and manage SSH access",
+    "Initialize bare repositories under /var/lib/git",
+    "Add developer public SSH keys for secure access",
+    "Push and pull code from multiple machines over SSH",
+    "Install and configure GitWeb for a simple web UI (e.g., port 1234)",
+    "Understand Git internals (.git/objects, refs, HEAD and blob storage)"
+  ],
+  "techStack": ["Git", "Linux", "OpenSSH", "GitWeb", "AWS EC2"],
+  "screenshots": [
+    {
+      "src": "/images/git-code-demo.png",
+      "alt": "Code Demo",
+      "caption": "Repository interaction demonstration."
+    },
+    {
+      "src": "/images/git-cli.png",
+      "alt": "Git Server CLI",
+      "caption": "CLI usage for pushing and pulling via SSH."
+    },
+    {
+      "src": "/images/git-web.png",
+      "alt": "Git Web UI",
+      "caption": "GitWeb listing repositories."
+    },
+    {
+      "src": "https://sjc.microlink.io/5lWkjvhAkhvAssO7ZL0Y_LwiaOC6Wa7EXXsEuOqxG3qKs4ryWd8V1TXLckjBTQXAJCbQN-9JvZJF9SCQWfuZ4w.jpeg",
+      "alt": "GitHub repository screenshot",
+      "caption": "Provided Source URL screenshot embedded directly as requested."
+    }
+  ],
+  "architecture": {
+    "image": "/images/git-server-architecture.png",
+    "description": "EC2 host exposes SSH for developers; repositories stored as bare repos; GitWeb provides read-only browsing."
+  },
+  "learnings": [
+    "How to launch and configure an AWS EC2 instance",
+    "Creating a 'git' user and managing SSH access",
+    "Initializing bare Git repositories manually",
+    "Handling secure access with SSH public keys",
+    "Serving repositories via GitWeb on a custom port",
+    "Repository structure: objects, refs, HEAD",
+    "How Git stores files as compressed blobs"
+  ],
+  "useCases": [
+    "Practice setting up your own version control infrastructure",
+    "Use as a lightweight private Git alternative",
+    "Educational deep-dive into Git internals and SSH"
+  ],
+  "installation": [
+    "Provision an EC2 instance (Ubuntu/Debian). Open port 22 (SSH) and optional web port (e.g., 1234).",
+    "SSH in and install packages: sudo apt update && sudo apt install -y git gitweb",
+    "Create git user: sudo adduser git",
+    "Create repo root: sudo mkdir -p /var/lib/git && sudo chown -R git:git /var/lib/git",
+    "As git user, create bare repo: cd /var/lib/git && git init --bare my-project.git",
+    "Add developer SSH keys to /home/git/.ssh/authorized_keys",
+    "Optionally run GitWeb (configure GITWEB_PROJECTROOT=/var/lib/git and serve on your chosen port).",
+    "Clone from clients: git clone git@<ec2-ip>:/var/lib/git/my-project.git"
+  ],
+  "role": "Solo builder",
+  "contributions": [
+    "EC2 provisioning and server hardening",
+    "SSH user management and key-based auth setup",
+    "Bare repository initialization and workflows",
+    "GitWeb configuration and documentation"
+  ],
+  "faq": [
+    {
+      "q": "What is a Git Server?",
+      "a": "A machine that hosts Git repositories so developers can push and pull code remotely."
+    },
+    {
+      "q": "How to create your own Git server on AWS?",
+      "a": "Launch an EC2 instance, install Git, create a 'git' user, and create bare repositories under /var/lib/git. Expose SSH for access."
+    },
+    {
+      "q": "SSH key support for secure collaboration?",
+      "a": "Each developer adds their public SSH key to the git user’s authorized_keys to get secure access."
+    },
+    {
+      "q": "Pushing and pulling from multiple machines?",
+      "a": "Use the repo’s SSH URL to clone; run git push and git pull from any authorized machine."
+    },
+    {
+      "q": "Setting up a Git Web UI?",
+      "a": "Install GitWeb, point it at your project root, and serve it on a custom port such as 1234."
+    },
+    {
+      "q": "How does Git store files internally?",
+      "a": "Files are stored as compressed blob objects in .git/objects, addressed by their SHA-1 hashes."
+    }
+  ],
+  "links": {
+    "repo": "https://github.com/asimar007/Build-My-Own-X/tree/main/Build%20My%20Own%20Github"
+  },
+  "tags": ["git", "server", "ssh", "aws", "linux"],
+  "year": 2025,
+  "coverImage": "/images/github.png"
+}

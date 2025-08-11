@@ -1,0 +1,92 @@
+{
+  "slug": "host-my-own-search-engine",
+  "title": "Host My Own Search Engine using SearXNG",
+  "tagline": "Crawl, index, and rank the web with a custom-built search engine.",
+  "description": "This project is a self-hosted, privacy-focused search engine powered by SearXNG – a free and open-source metasearch engine that aggregates results from multiple search engines like Google, Bing, DuckDuckGo, and others without tracking users or building user profiles. It aims to break the monopoly of ad-driven search engines and help reclaim user privacy.",
+  "audience": "Privacy-conscious users and developers interested in self-hosted solutions",
+  "problem": "Traditional search engines track user behavior, build profiles, and monetize data through targeted ads. How can we search the web privately without being tracked or profiled?",
+  "features": [
+    "No tracking, no profiling, no logs",
+    "Aggregates results from 70+ search engines (Google, Bing, Wikipedia, Reddit, etc.)",
+    "Easy Docker-based deployment on cloud infrastructure",
+    "Optional proxy setup for anonymous IP addresses",
+    "HTTPS enabled with Let's Encrypt certificates",
+    "Self-hosted on AWS EC2 with containerized setup"
+  ],
+  "techStack": [
+    "SearXNG",
+    "Docker",
+    "Docker Compose",
+    "AWS EC2",
+    "Let's Encrypt",
+    "Ubuntu"
+  ],
+  "screenshots": [
+    {
+      "src": "https://github.com/asimar007/Cross-Region-Migration-of-AWS-EBS-Volumes/blob/main/Screenshot/Search.png?raw=true",
+      "alt": "SearXNG Search Interface",
+      "caption": "Privacy-focused search engine interface with aggregated results"
+    }
+  ],
+  "architecture": {
+    "image": "/placeholder.svg?height=720&width=1280",
+    "description": "User Query -> SearXNG -> Multiple Search Engines (Google, Bing, DuckDuckGo) -> Aggregated Results -> User Interface"
+  },
+  "challenges": [
+    "Configuring Docker deployment on cloud infrastructure",
+    "Setting up HTTPS with Let's Encrypt certificates",
+    "Optimizing proxy configuration for IP anonymity"
+  ],
+  "learnings": [
+    "Docker containerization and deployment strategies",
+    "Privacy-focused search engine architecture",
+    "Cloud infrastructure setup and SSL certificate management"
+  ],
+  "installation": [
+    "Launch Ubuntu EC2 instance on AWS",
+    "SSH into instance and update system: sudo apt-get update && sudo apt-get upgrade",
+    "Install Docker: sudo apt install docker.io docker-compose -y",
+    "Clone SearXNG repo: git clone https://github.com/searxng/searxng-docker.git",
+    "Configure .env file with your domain and email",
+    "Launch with Docker Compose: docker compose up -d",
+    "Access at https://search.asimsk.online"
+  ],
+  "role": "Solo builder",
+  "contributions": [
+    "Deployed SearXNG on AWS EC2 infrastructure",
+    "Configured Docker containerization and SSL certificates",
+    "Set up privacy-focused search aggregation from multiple engines",
+    "Implemented proxy configuration for IP anonymity"
+  ],
+  "useCases": [
+    "Private web searching without tracking or profiling",
+    "Breaking free from ad-driven search engine monopolies",
+    "Educational tool for understanding metasearch engines",
+    "Self-hosted solution for privacy-conscious organizations"
+  ],
+  "faq": [
+    {
+      "q": "What is SearXNG?",
+      "a": "SearXNG is a free and open-source metasearch engine that aggregates results from multiple search engines without tracking users or building user profiles."
+    },
+    {
+      "q": "How does it protect privacy?",
+      "a": "SearXNG doesn't track users, store search queries, or build user profiles. It acts as a proxy between you and other search engines, keeping your searches anonymous."
+    },
+    {
+      "q": "What search engines does it use?",
+      "a": "SearXNG aggregates results from 70+ search engines including Google, Bing, DuckDuckGo, Wikipedia, Reddit, and many others."
+    },
+    {
+      "q": "Can I make my IP address anonymous?",
+      "a": "Yes, you can configure SearXNG to use a proxy server so that requests to other search engines are made via the proxy rather than your actual IP address."
+    }
+  ],
+  "links": {
+    "repo": "https://github.com/asimar007/Build-My-Own-X/tree/main/Host%20My%20Own%20Search%20Engine",
+    "docs": "https://www.asimsk.online/blog/host-my-own-search-engine"
+  },
+  "tags": ["privacy", "searxng", "docker", "aws", "metasearch"],
+  "year": 2025,
+  "coverImage": "/images/search-engine.png"
+}

@@ -1,0 +1,99 @@
+{
+  "slug": "build-my-own-programming-lang",
+  "title": "Build My Own Programming Language",
+  "tagline": "From lexer and parser to bytecode VM and standard library.",
+  "description": "This project is an implementation of a custom programming language, built from the ground up. It includes core components for lexical analysis, parsing, code generation, and execution.",
+  "audience": "Language and compiler nerds, developers interested in understanding how programming languages work internally.",
+  "problem": "How do languages transform source code into executable programs while balancing performance, simplicity, and safety? Understanding compiler design and VM implementation.",
+  "features": [
+    "Lexical analysis (tokenization) with lexer.js",
+    "Parsing with parser.js to construct Abstract Syntax Tree (AST)",
+    "Code generation with code_generator.js for executable code",
+    "Compilation orchestration with compiler.js",
+    "Code execution with runner.js",
+    "Main entry point with main.js"
+  ],
+  "techStack": ["JavaScript", "Node.js"],
+  "screenshots": [
+    {
+      "src": "/images/lang-repl.png",
+      "alt": "Language REPL",
+      "caption": "Interactive REPL running in the browser via WASM"
+    },
+    {
+      "src": "/images/lang-syntax.png",
+      "alt": "Language Syntax",
+      "caption": "Example code showing language syntax and features"
+    },
+    {
+      "src": "/images/lang-vm.png",
+      "alt": "VM Architecture",
+      "caption": "Bytecode VM execution and debugging interface"
+    }
+  ],
+  "architecture": {
+    "image": "/images/lang-architecture.png",
+    "description": "Source code flows through lexer, parser, AST, bytecode compiler, and finally executes on the register-based VM with garbage collection."
+  },
+  "learnings": [
+    "Lexical analysis and tokenization techniques",
+    "Abstract Syntax Tree construction and manipulation",
+    "Code generation from AST to executable code",
+    "Compiler design and implementation patterns",
+    "Runtime execution and interpretation",
+    "Modular architecture for language components"
+  ],
+  "useCases": [
+    "Learn compiler design and implementation fundamentals",
+    "Understand how programming languages work internally",
+    "Build domain-specific languages for specific use cases",
+    "Educational tool for teaching compiler concepts"
+  ],
+  "installation": [
+    "Clone the repository: git clone https://github.com/you/build-my-own-programming-lang",
+    "Navigate to project directory: cd build-my-own-programming-lang",
+    "Install Node.js if not already installed",
+    "Run your program: node main.js"
+  ],
+  "role": "Solo builder",
+  "contributions": [
+    "Lexer implementation for tokenization (lexer.js)",
+    "Parser for AST construction (parser.js)",
+    "Code generator for executable code (code_generator.js)",
+    "Compiler orchestration (compiler.js)",
+    "Runtime execution system (runner.js)",
+    "Main application entry point (main.js)"
+  ],
+  "faq": [
+    {
+      "q": "What is a programming language implementation?",
+      "a": "It's the software that takes source code written in a language and either interprets it directly or compiles it to machine code or bytecode for execution."
+    },
+    {
+      "q": "What's the difference between stack-based and register-based VMs?",
+      "a": "Stack-based VMs use a stack for all operations, while register-based VMs use virtual registers. Register-based VMs often have fewer instructions but more complex instruction formats."
+    },
+    {
+      "q": "How does garbage collection work in this implementation?",
+      "a": "The VM uses a mark-and-sweep garbage collector that automatically manages memory by tracking object references and freeing unused objects."
+    },
+    {
+      "q": "Can I extend this language with new features?",
+      "a": "Yes! The modular design allows you to add new syntax, built-in functions, and VM instructions. The parser uses Pratt parsing which makes adding operators straightforward."
+    },
+    {
+      "q": "How does the WASM integration work?",
+      "a": "The Rust VM compiles to WebAssembly, allowing the language to run in browsers. The web playground provides an interactive environment for testing code."
+    },
+    {
+      "q": "What can I learn from building this?",
+      "a": "You'll understand lexical analysis, parsing techniques, AST manipulation, bytecode generation, VM design, memory management, and how all these components work together."
+    }
+  ],
+  "links": {
+    "repo": "https://github.com/asimar007/Build-My-Own-X/tree/main/Build%20My%20Own%20Programming%20Language"
+  },
+  "tags": ["compiler", "parser", "vm", "javascript", "nodejs"],
+  "year": 2025,
+  "coverImage": "/images/programming-lang.png"
+}
