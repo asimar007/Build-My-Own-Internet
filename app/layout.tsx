@@ -4,8 +4,14 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Own Internet",
-  description: "Created by Asim",
+  title: "Build My Own Internet",
+  description:
+    "A curated showcase of 'Build My Own X' projects - learn by building your own versions of popular tools and services from scratch.",
+  icons: {
+    icon: "/images/favicon.png",
+    shortcut: "/images/favicon.png",
+    apple: "/images/favicon.png",
+  },
 };
 
 export default function RootLayout({

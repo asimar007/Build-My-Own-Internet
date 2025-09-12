@@ -1,5 +1,13 @@
 [
   {
+    "slug": "build-my-own-cursor",
+    "title": "Build My Own Cursor",
+    "tagline": "An AI agent that can build and create websites from simple text-based commands.",
+    "tags": ["AI Agent", "LLM", "Nodejs", "Google Gemini"],
+    "year": 2025,
+    "coverImage": "/images/my-own-cursor.png"
+  },
+  {
     "slug": "build-my-own-github",
     "title": "Build My Own GitHub",
     "tagline": "A code hosting and collaboration platform with repos, issues, and pull requests.",

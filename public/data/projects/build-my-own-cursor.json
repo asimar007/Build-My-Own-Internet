@@ -1,0 +1,35 @@
+{
+  "slug": "build-my-own-cursor",
+  "title": "Build My Own Cursor",
+  "tagline": "An AI agent that can build and create websites from simple text-based commands.",
+  "description": "This project is an AI agent that can build and create websites from simple text-based commands. This tool leverages the power of Large Language Models (LLMs) to generate and execute terminal commands, effectively acting as an AI web developer.\n\nThe core of this project is a tool that can execute any terminal or shell command provided by an LLM. This allows the AI to perform tasks like creating directories, adding files, and writing code, thus building a complete website from a single command. The project demonstrates a practical application of AI agents in automating web development tasks.",
+  "tags": ["AI Agent", "LLM", "Nodejs", "Google Gemini"],
+  "year": 2025,
+  "coverImage": "/images/my-own-cursor.png",
+  "features": [
+    "AI Website Creation: Generate entire websites by providing a simple command",
+    "Extensible and Customizable: The system instructions for the LLM can be modified to change the AI's behavior and capabilities",
+    "Cross-Platform Compatible: The AI can be configured to generate commands for different operating systems (e.g., macOS, Windows, Linux)",
+    "Sequential Command Execution: Asynchronous operations are handled to ensure that commands are executed in the correct order"
+  ],
+  "techStack": [
+    "Large Language Models (LLMs)",
+    "Terminal/Shell Commands",
+    "Node.js",
+    "AI Agents",
+    "Google Gemini"
+  ],
+  "status": "Completed",
+  "githubUrl": "https://github.com/asimar007/Build-My-Own-X/tree/main/Build%20My%20Own%20Cursor",
+  "demoUrl": null,
+  "links": {
+    "repo": "https://github.com/asimar007/Build-My-Own-X/tree/main/Build%20My%20Own%20Cursor"
+  },
+  "learningOutcomes": [
+    "Understanding AI agent architecture",
+    "Working with Large Language Models",
+    "Terminal command automation",
+    "Cross-platform development considerations",
+    "Asynchronous command execution patterns"
+  ]
+}
