@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Suspense } from "react";
+import { Github } from "lucide-react";
 import { getProjectsIndex, type ProjectIndexItem } from "@/lib/projects";
 import SiteHeader from "@/components/site-header";
 import ProjectCard from "@/components/project-card";
@@ -46,8 +47,9 @@ export default async function Page() {
             href="https://github.com/asimar007/Build-My-Own-X"
             target="_blank"
             rel="noreferrer"
-            className="text-sm text-muted-foreground hover:underline"
+            className="flex items-center gap-2 text-sm text-muted-foreground hover:underline"
           >
+            <Github className="h-4 w-4" />
             View on GitHub
           </Link>
         </div>
